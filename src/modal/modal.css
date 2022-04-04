@@ -1,0 +1,64 @@
+
+.modal-container{
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    justify-content: center;
+}
+
+.modal-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.modal__content-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+}
+
+.modal__button{
+    background-color: rgb(208, 117, 53);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.content-item__field{
+    width: 50%;
+}
+
+.modal__button-group{
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.modal__button{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.button-delete{
+    background-color: rgba(184, 19, 19, 0.921);
+    margin-left: 10px;
+}

@@ -1,0 +1,132 @@
+
+.container-book {
+    margin: 2em 2em 0 2em;
+    line-height: 1.2;
+    max-height: 300px;
+    transform-style: preserve-3d;
+    transform: rotateY(90deg);
+    perspective-origin: top;
+    transition: 2s;
+}
+
+.container-book.container-book-open{
+    transform: translate3d(0, 30px, 0); 
+    z-index: 20;
+}
+
+.side {
+    position: absolute;
+    width: 15em;
+    height: 100%;
+    border: 1px solid rgb(232, 230, 225);
+}
+
+.back {
+    backface-visibility: hidden;
+    transform: translateZ(-2em);
+    background-color: rgb(36, 104, 48);
+}
+
+.left {
+    transform: translateX(-2em) rotateY(90deg);
+    font-size: 16px;
+    background-color: rgb(36, 104, 48);
+    z-index: 20;
+    width: 4em;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: inset 6px 6px 14px -6px rgba(0, 0, 0, 0.5);
+}
+
+.right {
+    backface-visibility: hidden;
+    transform: translateX(200px) rotateY(90deg);
+    background-color: rgb(255, 245, 201);
+    width: 4em;
+}
+
+.top {
+    transform: rotateX(90deg);
+    background-color: rgb(255, 245, 201);
+    top: -10%;  
+    position: absolute;
+    width: 230px;
+    height: 21%;
+
+}
+
+.front {
+    transform: translateZ(2em);
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgb(36, 104, 48);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 6px 6px 14px -6px rgba(0, 0, 0, 0.5);
+}
+
+.left__book-property{
+    padding: 8px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transform: scaleX(-1);
+    text-align: center;
+}
+
+.book-title{
+    flex: 1 1 30%;
+}
+
+.front__book-property{
+    font-size: 24px;
+    text-align: center;
+}
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+    .side {
+        width: 12em;
+    }
+
+    .left {
+        transform: translateX(-2em) rotateY(90deg);
+        width: 4em;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .side {
+        width: 12em;
+    }
+
+    .left {
+        transform: translateX(-2em) rotateY(90deg);
+        width: 4em;
+    }
+
+}
+
+@media (max-width: 530px) {
+
+    .side {
+        width: 10em;
+    }
+
+    .front__book-property{
+        font-size: 16px;
+    } 
+
+    .left {
+        width: 4em;
+    }
+
+    .top {
+        height: 25%;
+    }
+}
+
